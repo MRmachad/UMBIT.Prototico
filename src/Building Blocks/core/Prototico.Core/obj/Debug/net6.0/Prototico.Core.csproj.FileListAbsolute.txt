@@ -1,0 +1,14 @@
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\Prototico.Core.csproj.AssemblyReference.cache
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\Prototico.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\Prototico.Core.AssemblyInfoInputs.cache
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\Prototico.Core.AssemblyInfo.cs
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\Prototico.Core.csproj.CoreCompileInputs.cache
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\bin\Debug\net6.0\Prototico.Core.deps.json
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\bin\Debug\net6.0\Prototico.Core.runtimeconfig.json
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\bin\Debug\net6.0\Prototico.Core.dll
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\bin\Debug\net6.0\Prototico.Core.pdb
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\Prototico.Core.dll
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\refint\Prototico.Core.dll
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\Prototico.Core.pdb
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\Prototico.Core.genruntimeconfig.cache
+D:\Dev\ByMySelf\Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\ref\Prototico.Core.dll
