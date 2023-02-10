@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 using System;
 using System.Runtime.CompilerServices;
 
-namespace Prototico.Core.Repositorio.Repositorio
+namespace UMBIT.Core.Repositorio.Repositorio
 {
     public interface IRepositorio<T> where T : class
     {

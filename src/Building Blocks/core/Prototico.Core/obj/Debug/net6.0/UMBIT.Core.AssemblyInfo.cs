@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Prototico.Core")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("UMBIT.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("Prototico.Core")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Prototico.Core")]
+[assembly: System.Reflection.AssemblyProductAttribute("UMBIT.Core")]
+[assembly: System.Reflection.AssemblyTitleAttribute("UMBIT.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.

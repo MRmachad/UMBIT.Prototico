@@ -1,8 +1,8 @@
 ﻿
-using Prototico.Core.Repositorio.Repositorio;
+using UMBIT.Core.Repositorio.Repositorio;
 using System.Data.Entity;
 
-namespace Prototico.Core.Repositorio
+namespace UMBIT.Core.Repositorio
 {
     public interface IDataServiceFactory
     {

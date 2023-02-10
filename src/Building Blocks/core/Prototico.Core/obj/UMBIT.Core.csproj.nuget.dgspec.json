@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\Prototico.Core.csproj": {}
+    "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\UMBIT.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\Prototico.Core.csproj": {
+    "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\UMBIT.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\Prototico.Core.csproj",
-        "projectName": "Prototico.Core",
-        "projectPath": "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\Prototico.Core.csproj",
+        "projectUniqueName": "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\UMBIT.Core.csproj",
+        "projectName": "UMBIT.Core",
+        "projectPath": "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\UMBIT.Core.csproj",
         "packagesPath": "C:\\Users\\macha\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\obj\\",
         "projectStyle": "PackageReference",
@@ -48,9 +48,25 @@
               "target": "Package",
               "version": "[6.4.4, )"
             },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.2, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.4.0, )"
             }
           },
           "imports": [

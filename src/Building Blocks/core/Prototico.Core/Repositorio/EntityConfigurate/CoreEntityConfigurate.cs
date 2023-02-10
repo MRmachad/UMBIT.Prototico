@@ -1,7 +1,7 @@
-﻿using Prototico.Core.Repositorio.BaseEntity;
+﻿using UMBIT.Core.Repositorio.BaseEntity;
 using System.Data.Entity.ModelConfiguration;
 
-namespace Prototico.Core.Repositorio.EntityConfigurate
+namespace UMBIT.Core.Repositorio.EntityConfigurate
 {
     public abstract class CoreEntityConfigurate<T> : EntityTypeConfiguration<T> where T : CoreBaseEntity
     {

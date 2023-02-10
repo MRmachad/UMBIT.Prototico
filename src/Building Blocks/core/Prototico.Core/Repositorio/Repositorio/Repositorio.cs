@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 
-namespace Prototico.Core.Repositorio.Repositorio
+namespace UMBIT.Core.Repositorio.Repositorio
 {
     public class Repositorio<T> : IRepositorio<T> where T : class
     {

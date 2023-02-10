@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prototico.Core.Repositorio.BaseEntity
+namespace UMBIT.Core.Repositorio.BaseEntity
 {
     public abstract class CoreBaseEntity
     {

@@ -1,18 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Prototico.Core.Repositorio.BaseEntity;
-using Prototico.Core.Repositorio.EntityConfigurate;
+using UMBIT.Core.Repositorio.BaseEntity;
+using UMBIT.Core.Repositorio.EntityConfigurate;
 using System;
 using System.Linq;
 using System.Reflection;
 
-namespace Prototico.Core.Repositorio.Contexto
+namespace UMBIT.Core.Repositorio.Contexto
 {
 
-    public class Contexto : DbContext
+    public class ContextoDB : DbContext
     {
-        public Contexto(DbContextOptions options) : base(options)
+        public ContextoDB(DbContextOptions options) : base(options)
         {
         }
+        
         protected virtual void OnModelCreating(System.Data.Entity.DbModelBuilder modelBuilder)
         {
             foreach (Assembly a in AppDomain.CurrentDomain.GetAssemblies())
