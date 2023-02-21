@@ -1,0 +1,17 @@
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\obj\Debug\net6.0\Prototico.Core.API.csproj.AssemblyReference.cache
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\obj\Debug\net6.0\Prototico.Core.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\obj\Debug\net6.0\Prototico.Core.API.AssemblyInfoInputs.cache
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\obj\Debug\net6.0\Prototico.Core.API.AssemblyInfo.cs
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\obj\Debug\net6.0\Prototico.Core.API.csproj.CoreCompileInputs.cache
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\bin\Debug\net6.0\Prototico.Core.API.deps.json
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\bin\Debug\net6.0\Prototico.Core.API.runtimeconfig.json
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\bin\Debug\net6.0\Prototico.Core.API.dll
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\bin\Debug\net6.0\Prototico.Core.API.pdb
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\bin\Debug\net6.0\UMBIT.Core.dll
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\bin\Debug\net6.0\UMBIT.Core.pdb
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\obj\Debug\net6.0\Prototico.Core.API.csproj.CopyComplete
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\obj\Debug\net6.0\Prototico.Core.API.dll
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\obj\Debug\net6.0\refint\Prototico.Core.API.dll
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\obj\Debug\net6.0\Prototico.Core.API.pdb
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\obj\Debug\net6.0\Prototico.Core.API.genruntimeconfig.cache
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core.API\obj\Debug\net6.0\ref\Prototico.Core.API.dll

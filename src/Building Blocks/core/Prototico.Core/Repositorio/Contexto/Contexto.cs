@@ -4,31 +4,36 @@ using UMBIT.Core.Repositorio.EntityConfigurate;
 using System;
 using System.Linq;
 using System.Reflection;
-
 namespace UMBIT.Core.Repositorio.Contexto
 {
 
-    public class ContextoDB : DbContext
+    public class DataContext : DbContext
     {
-        public ContextoDB(DbContextOptions options) : base(options)
+        public DataContext(DbContextOptions options) : base(options)
         {
-        }
-        
-        protected virtual void OnModelCreating(System.Data.Entity.DbModelBuilder modelBuilder)
-        {
-            foreach (Assembly a in AppDomain.CurrentDomain.GetAssemblies())
-            {
-                foreach (Type t in a.GetTypes())
-                {
 
-                    if (t != null && t == typeof(CoreEntityConfigurate<>))
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                if (assembly != null)
+                    assembly.GetTypes()
+                    .Where(t =>
+                        t != null &&
+                        t.Namespace != null &&
+                        t.BaseType != null &&
+                        t.IsClass &&
+                        t.BaseType.IsGenericType &&
+                        (t.BaseType.GetGenericTypeDefinition() == typeof(CoreEntityConfigurate<>)))
+                    .ToList().ForEach((t) =>
                     {
                         dynamic instanciaDeConfiguracao = Activator.CreateInstance(t);
-                        modelBuilder.Configurations.Add(instanciaDeConfiguracao);
-                    }
-                }
+                        modelBuilder.ApplyConfiguration(instanciaDeConfiguracao);
+                    });
             }
         }
+
         public override int SaveChanges()
         {
             var objetos = ChangeTracker.Entries().Where(x =>

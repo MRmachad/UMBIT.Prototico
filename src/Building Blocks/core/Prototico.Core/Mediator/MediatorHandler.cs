@@ -6,6 +6,7 @@ using UMBIT.Core.RabbitMQClient.Interfaces;
 using UMBIT.Core.RabbitMQClient.BasicConfig;
 using Microsoft.Extensions.Options;
 using System;
+using UMBIT.Core.RabbitMQClient;
 
 namespace UMBIT.Core.Mediator
 {
