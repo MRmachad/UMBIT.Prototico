@@ -1,4 +1,6 @@
-﻿using UMBIT.Core.Repositorio;
+﻿using System;
+using System.Collections.Generic;
+using UMBIT.Core.Repositorio;
 using UMBIT.Core.Repositorio.Repositorio;
 using UMBIT.CORE.API.Servico.Interface;
 

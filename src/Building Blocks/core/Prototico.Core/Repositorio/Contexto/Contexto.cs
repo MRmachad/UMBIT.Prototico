@@ -15,22 +15,31 @@ namespace UMBIT.Core.Repositorio.Contexto
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+           
             foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
             {
-                if (assembly != null)
-                    assembly.GetTypes()
-                    .Where(t =>
-                        t != null &&
-                        t.Namespace != null &&
-                        t.BaseType != null &&
-                        t.IsClass &&
-                        t.BaseType.IsGenericType &&
-                        (t.BaseType.GetGenericTypeDefinition() == typeof(CoreEntityConfigurate<>)))
-                    .ToList().ForEach((t) =>
-                    {
-                        dynamic instanciaDeConfiguracao = Activator.CreateInstance(t);
-                        modelBuilder.ApplyConfiguration(instanciaDeConfiguracao);
-                    });
+                try
+                {
+                    if (assembly != null)
+                        assembly.GetTypes()
+                        .Where(t =>
+                            t != null &&
+                            t.Namespace != null &&
+                            t.BaseType != null &&
+                            t.IsClass &&
+                            t.BaseType.IsGenericType &&
+                            (t.BaseType.GetGenericTypeDefinition() == typeof(CoreEntityConfigurate<>)))
+                        .ToList().ForEach((t) =>
+                        {
+                            dynamic instanciaDeConfiguracao = Activator.CreateInstance(t);
+                            modelBuilder.ApplyConfiguration(instanciaDeConfiguracao);
+                        });
+                }
+                catch
+                {
+                    continue;
+                }
+
             }
         }
 

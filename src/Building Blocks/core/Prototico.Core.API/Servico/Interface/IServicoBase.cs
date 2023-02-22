@@ -1,4 +1,7 @@
-﻿namespace UMBIT.CORE.API.Servico.Interface
+﻿using System;
+using System.Collections.Generic;
+
+namespace UMBIT.CORE.API.Servico.Interface
 {
     public interface IServiceBase<T> where T : class
     {
