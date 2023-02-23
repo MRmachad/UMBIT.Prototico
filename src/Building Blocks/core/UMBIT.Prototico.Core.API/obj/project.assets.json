@@ -1876,8 +1876,8 @@
     },
     "UMBIT.Prototico.Core/1.0.0": {
       "type": "project",
-      "path": "../Prototico.Core/UMBIT.Prototico.Core.csproj",
-      "msbuildProject": "../Prototico.Core/UMBIT.Prototico.Core.csproj"
+      "path": "../UMBIT.Prototico.Core/UMBIT.Prototico.Core.csproj",
+      "msbuildProject": "../UMBIT.Prototico.Core/UMBIT.Prototico.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1895,11 +1895,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj",
+      "projectUniqueName": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj",
       "projectName": "UMBIT.Prototico.Core.API",
-      "projectPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj",
+      "projectPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj",
       "packagesPath": "C:\\Users\\LeonardoSilva\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core.API\\obj\\",
+      "outputPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LeonardoSilva\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1916,8 +1916,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\UMBIT.Prototico.Core.csproj": {
-              "projectPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\UMBIT.Prototico.Core.csproj"
+            "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj": {
+              "projectPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj"
             }
           }
         }
