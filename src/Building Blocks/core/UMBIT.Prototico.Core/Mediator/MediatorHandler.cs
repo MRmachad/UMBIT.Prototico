@@ -35,9 +35,9 @@ namespace UMBIT.Core.Mediator
             return await _mediator.Send(comando);
         }
 
-        public async Task EnviaMensageRabbitMQ<T>(T evento) where T : class
+        public Task EnviaMensageRabbitMQ<T>(T evento) where T : class
         {
-            _messageProducerMQ.SendMessage<T>(
+            var res = _messageProducerMQ.SendMessage<T>(
                                                evento,
                                                new QueueDeclare(
                                                    this._appServiceSettings.Value.Queue == null ? String.Empty : this._appServiceSettings.Value.Queue,
@@ -57,6 +57,7 @@ namespace UMBIT.Core.Mediator
                                                    )
                                              );
 
+            return Task.FromResult(res);
 
         }
     }

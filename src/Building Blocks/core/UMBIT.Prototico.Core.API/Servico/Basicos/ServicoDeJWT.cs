@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 using UMBIT.Prototico.Core.API.Entidade;
 using UMBIT.Prototico.Core.API.Servico.Interface;
 
-namespace UMBIT.Prototico.Core.API.Servico
+namespace UMBIT.Prototico.Core.API.Servico.Basicos
 {
     public class ServicoDeJWT : IServicoDeJWT
     {
         public async Task<TokenJWT> GetToken(string user, string secret, double expiracaoMins, string validoEm, string emissor)
         {
-            return  await this.GerarJwt( user,  secret,  expiracaoMins,  validoEm,  emissor);
+            return await GerarJwt(user, secret, expiracaoMins, validoEm, emissor);
         }
 
         private async Task<TokenJWT> GerarJwt(string user, string secret, double expiracaoMins, string validoEm, string emissor)
