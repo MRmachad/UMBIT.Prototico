@@ -1,7 +1,6 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
 using UMBIT.Core.Repositorio.Repositorio;
-using System.Data.Entity;
-
 namespace UMBIT.Core.Repositorio
 {
     public interface IDataServiceFactory

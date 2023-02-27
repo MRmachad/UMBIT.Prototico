@@ -12,3 +12,15 @@ C:\Users\macha\Documents\Dev\ByMySelf\C#\UMBIT.Prototico\src\Building Blocks\cor
 C:\Users\macha\Documents\Dev\ByMySelf\C#\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\UMBIT.Core.pdb
 C:\Users\macha\Documents\Dev\ByMySelf\C#\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\UMBIT.Core.genruntimeconfig.cache
 C:\Users\macha\Documents\Dev\ByMySelf\C#\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\ref\UMBIT.Core.dll
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\bin\Debug\net6.0\UMBIT.Core.deps.json
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\bin\Debug\net6.0\UMBIT.Core.dll
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\bin\Debug\net6.0\UMBIT.Core.pdb
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\UMBIT.Core.csproj.AssemblyReference.cache
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\UMBIT.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\UMBIT.Core.AssemblyInfoInputs.cache
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\UMBIT.Core.AssemblyInfo.cs
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\UMBIT.Core.csproj.CoreCompileInputs.cache
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\UMBIT.Core.dll
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\refint\UMBIT.Core.dll
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\UMBIT.Core.pdb
+D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\obj\Debug\net6.0\ref\UMBIT.Core.dll

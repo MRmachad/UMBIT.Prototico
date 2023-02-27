@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
+using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
@@ -12,7 +13,7 @@ namespace UMBIT.Core.Repositorio.Repositorio
         protected readonly DbContext Contexto;
 
         protected const int TAMANHO_PAGINA = 50;
-        protected DbContextTransaction Transacao { get; set; }
+        protected IDbContextTransaction Transacao { get; set; }
         private bool TransacaoAberta { get; set; }
         public Repositorio(DbContext contexto)
         {
@@ -39,7 +40,7 @@ namespace UMBIT.Core.Repositorio.Repositorio
         {
             return MiddlewareDeRepositorio(() =>
             {
-                return this.Contexto.Set<T>().Attach(objeto);
+                return this.Contexto.Set<T>().Attach(objeto) as T;
             });
         }
 
