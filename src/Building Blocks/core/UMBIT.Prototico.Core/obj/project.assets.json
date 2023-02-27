@@ -803,11 +803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\UMBIT.Prototico.Core.csproj",
+      "projectUniqueName": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj",
       "projectName": "UMBIT.Prototico.Core",
-      "projectPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\UMBIT.Prototico.Core.csproj",
+      "projectPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj",
       "packagesPath": "C:\\Users\\LeonardoSilva\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core\\obj\\",
+      "outputPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LeonardoSilva\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s21W6HgZOrsbMRv5rRkO1I6A9L1WPIJC3CyQ2zNXMhugkzIoLWgiEmezwPd+B/6E86RMDFYJpucdVP+8DbJGqA==",
+  "dgSpecHash": "1gXJNCdBlIEx0nLcVQ2RA7jlt4FD2kJwjvA6qjiT+SrHcAFwW1Fg3991CqJrjqun35HkZUVXRCgH0cZNzpZy1g==",
   "success": true,
-  "projectFilePath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj",
+  "projectFilePath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LeonardoSilva\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\LeonardoSilva\\.nuget\\packages\\mediatr\\12.0.0\\mediatr.12.0.0.nupkg.sha512",
