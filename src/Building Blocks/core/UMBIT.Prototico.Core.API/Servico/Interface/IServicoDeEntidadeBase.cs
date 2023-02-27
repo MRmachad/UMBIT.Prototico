@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UMBIT.CORE.API.Servico.Interface
 {
-    public interface IServiceBase<T> where T : class
+    public interface IServicoDeEntidadeBase<T> where T : class
     {
         void AdicionaObjeto(T Entidade);
         T ObtenhaEntidade(Guid id);

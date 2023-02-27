@@ -4,21 +4,21 @@ using UMBIT.Core.Repositorio;
 using UMBIT.Core.Repositorio.Repositorio;
 using UMBIT.CORE.API.Servico.Interface;
 
-namespace UMBIT.CORE.API.Servico
+namespace UMBIT.Prototico.Core.API.Servico.Basicos
 {
-    public abstract class ServiceBase<T> : IServiceBase<T> where T : class
+    public abstract class ServicoDeEntidadeBase<T> : IServicoDeEntidadeBase<T> where T : class
     {
         private IRepositorio<T> Repositorio { get; set; }
-        public ServiceBase(IDataServiceFactory dataServiceFactory)
+        public ServicoDeEntidadeBase(IDataServiceFactory dataServiceFactory)
         {
-            this.Repositorio = dataServiceFactory.GetRepositorio<T>();
+            Repositorio = dataServiceFactory.GetRepositorio<T>();
         }
         public void AtualizeEntidade(T Entidade)
         {
             try
             {
-                this.Repositorio.Atualize(Entidade);
-                this.Repositorio.SalveAlteracoes();
+                Repositorio.Atualize(Entidade);
+                Repositorio.SalveAlteracoes();
             }
             catch (Exception ex)
             {
@@ -30,7 +30,7 @@ namespace UMBIT.CORE.API.Servico
         {
             try
             {
-                return this.Repositorio.ObtenhaUnico(id);
+                return Repositorio.ObtenhaUnico(id);
 
             }
             catch (Exception ex)
@@ -43,7 +43,7 @@ namespace UMBIT.CORE.API.Servico
         {
             try
             {
-                return this.Repositorio.ObtenhaTodos();
+                return Repositorio.ObtenhaTodos();
             }
             catch (Exception ex)
             {
@@ -55,8 +55,8 @@ namespace UMBIT.CORE.API.Servico
         {
             try
             {
-                this.Repositorio.Remova(Entidade);
-                this.Repositorio.SalveAlteracoes();
+                Repositorio.Remova(Entidade);
+                Repositorio.SalveAlteracoes();
             }
             catch (Exception ex)
             {
@@ -66,8 +66,8 @@ namespace UMBIT.CORE.API.Servico
 
         public void AdicionaObjeto(T Entidade)
         {
-            this.Repositorio.Adicione(Entidade);
-            this.Repositorio.SalveAlteracoes();
+            Repositorio.Adicione(Entidade);
+            Repositorio.SalveAlteracoes();
         }
     }
 }

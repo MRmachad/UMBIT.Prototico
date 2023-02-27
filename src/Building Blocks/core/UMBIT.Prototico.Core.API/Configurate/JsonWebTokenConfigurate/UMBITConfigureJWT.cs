@@ -5,7 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using Prototico.Core.API.Configurate.TemplateSection;
 using System;
 using System.Text;
-using UMBIT.Prototico.Core.API.Servico;
+using UMBIT.Prototico.Core.API.Servico.Basicos;
 using UMBIT.Prototico.Core.API.Servico.Interface;
 
 namespace Prototico.Core.API.Configurate.JsonWebToken
@@ -42,6 +42,7 @@ namespace Prototico.Core.API.Configurate.JsonWebToken
             });
 
             services.AddScoped<IServicoDeJWT, ServicoDeJWT>();
+            services.Configure<SectionJwt>(configuration.GetSection("SectionJwt"));
         }
     }
 }
