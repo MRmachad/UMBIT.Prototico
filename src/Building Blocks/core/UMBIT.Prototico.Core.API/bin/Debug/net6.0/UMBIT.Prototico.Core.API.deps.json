@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "UMBIT.Prototico.Core.API/1.0.0": {
         "dependencies": {
+          "FluentValidation": "11.5.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.14",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.14",
