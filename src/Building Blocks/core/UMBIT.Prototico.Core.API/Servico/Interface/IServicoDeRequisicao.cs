@@ -17,3 +17,6 @@ namespace UMBIT.Prototico.Core.API.Servico.Interface
              where T1 : class;
     }
 }
+//    services.AddHttpClient<InterfaceDeServico, Servico que Herda>("",  (configHTTPClient) =>{
+//                configHTTPClient.BaseAddress = new Uri("");
+//});

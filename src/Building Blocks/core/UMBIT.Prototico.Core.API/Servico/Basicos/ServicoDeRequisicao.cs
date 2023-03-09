@@ -1,22 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Extensions;
-using Microsoft.AspNetCore.Mvc.Formatters;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.IO;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using System.Web;
-using UMBIT.Core.Comunication;
 using UMBIT.Prototico.Core.API.Servico.Interface;
 
 namespace UMBIT.Prototico.Core.API.Servico.Basicos
 {
-    public class ServicoDeRequisicao : Service, IServicoDeRequisicao
+    public abstract class ServicoDeRequisicao : Service, IServicoDeRequisicao
     {
         private readonly HttpClient cliente;
 
