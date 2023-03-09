@@ -116,6 +116,7 @@ namespace UMBIT.Prototico.Core.API.Servico
 
         public override Task<AuthResponse> Logout(string usuario, string senha)
         {
+
             throw new NotImplementedException();
         }
 
