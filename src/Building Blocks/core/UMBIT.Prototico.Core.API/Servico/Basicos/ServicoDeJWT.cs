@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -12,14 +13,14 @@ using UMBIT.Prototico.Core.API.Servico.Interface;
 
 namespace UMBIT.Prototico.Core.API.Servico.Basicos
 {
-    public class ServicoDeJWT : IServicoDeJWT
+    public class ServicoDeJWT 
     {
-        public async Task<TokenJWT> GetToken(string user, string secret, double expiracaoMins, string validoEm, string emissor)
+        public static async Task<TokenJWT> GetToken(string user, string secret, double expiracaoMins, string validoEm, string emissor)
         {
             return await GerarJwt(user, secret, expiracaoMins, validoEm, emissor);
         }
 
-        private async Task<TokenJWT> GerarJwt(string user, string secret, double expiracaoMins, string validoEm, string emissor)
+        private static async Task<TokenJWT> GerarJwt(string user, string secret, double expiracaoMins, string validoEm, string emissor)
         {
 
             var identityClaims = await ObtenhaClaims(user);
@@ -29,7 +30,7 @@ namespace UMBIT.Prototico.Core.API.Servico.Basicos
 
             return await ObtenhaRespostaToken(user, encodedToken, encodedRefreshToken, expiracaoMins, identityClaims);
         }
-        private Task<TokenJWT> ObtenhaRespostaToken(string user, string encodedToken, string encodedRefreshToken, double expiracaoMins, ClaimsIdentity claimsIdentity)
+        private static Task<TokenJWT> ObtenhaRespostaToken(string user, string encodedToken, string encodedRefreshToken, double expiracaoMins, ClaimsIdentity claimsIdentity)
         {
             var response = new TokenJWT
             {
@@ -45,7 +46,7 @@ namespace UMBIT.Prototico.Core.API.Servico.Basicos
 
             return Task.FromResult(response);
         }
-        private Task<ClaimsIdentity> ObtenhaClaims(string user, IList<Claim> claim = null, IList<string> userRoles = null)
+        private static Task<ClaimsIdentity> ObtenhaClaims(string user, IList<Claim> claim = null, IList<string> userRoles = null)
         {
             var identityClaims = new ClaimsIdentity();
             var claims = claim != null ? claim : new List<Claim>();
@@ -66,7 +67,7 @@ namespace UMBIT.Prototico.Core.API.Servico.Basicos
             return Task.FromResult(identityClaims);
 
         }
-        private string ObtenhaToken(ClaimsIdentity identityClaims, string secret, double expiracaoMins, string validoEm, string emissor)
+        private static string ObtenhaToken(ClaimsIdentity identityClaims, string secret, double expiracaoMins, string validoEm, string emissor)
         {
             var key = Encoding.ASCII.GetBytes(secret);
             var tokenHandler = new JwtSecurityTokenHandler();

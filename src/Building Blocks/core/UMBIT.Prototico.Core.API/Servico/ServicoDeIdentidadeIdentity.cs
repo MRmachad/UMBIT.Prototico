@@ -14,15 +14,13 @@ namespace UMBIT.Prototico.Core.API.Servico
     public class ServicoDeIdentidadeIdentity : ServicoDeIdentidade
     {
 
-        public readonly IServicoDeJWT ServicoDeJWT;
         public readonly IOptions<SectionJwt> SectionJWT;
         public readonly UserManager<IdentityUser> UserManager;
         public readonly IUserValidator<IdentityUser> UserValidator;
         private readonly SignInManager<IdentityUser> SignInManager;
-        public ServicoDeIdentidadeIdentity(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, IUserValidator<IdentityUser> UserValidator, IServicoDeJWT servicoDeJWT, IOptions<SectionJwt> sectionJWT): base()
+        public ServicoDeIdentidadeIdentity(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, IUserValidator<IdentityUser> UserValidator, IOptions<SectionJwt> sectionJWT): base()
         {
             this.UserManager = userManager;
-            this.ServicoDeJWT = servicoDeJWT;
             this.SectionJWT = sectionJWT;
             this.SignInManager = signInManager;
             this.UserValidator = UserValidator;
@@ -60,7 +58,7 @@ namespace UMBIT.Prototico.Core.API.Servico
 
                 identityUser = await this.UserManager.FindByEmailAsync(usuario);
 
-                var Token = await this.ServicoDeJWT.GetToken(
+                var Token = await ServicoDeJWT.GetToken(
                     identityUser.Email,
                     this.SectionJWT.Value.Secret,
                     this.SectionJWT.Value.ExpiracaoMins,
@@ -92,7 +90,7 @@ namespace UMBIT.Prototico.Core.API.Servico
 
             if (result.Succeeded)
             {
-                var Token = await this.ServicoDeJWT.GetToken(
+                var Token = await ServicoDeJWT.GetToken(
                     usuario,
                     this.SectionJWT.Value.Secret,
                     this.SectionJWT.Value.ExpiracaoMins,

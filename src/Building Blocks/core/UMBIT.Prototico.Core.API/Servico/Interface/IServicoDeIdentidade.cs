@@ -5,7 +5,7 @@ using UMBIT.Prototico.Core.API.Entidade;
 
 namespace UMBIT.Prototico.Core.API.Servico.Interface
 {
-    public interface IServicoDeIdentidade
+    internal interface IServicoDeIdentidade
     {
         Task<AuthResponse> Login(string usuario, string senha);
         Task<AuthResponse> Logout(string usuario, string senha);

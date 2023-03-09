@@ -7,7 +7,7 @@ using UMBIT.Prototico.Core.API.Servico.Basicos;
 
 namespace UMBIT.Prototico.Core.API.Servico.Interface
 {
-    public interface IServicoDeRequisicao
+    internal interface IServicoDeRequisicao
     {
         Task<ResponseResult> ExecutePostAsync<T>(T toContent, string path, Encoding encoding, string mediaType)
              where T : class;
@@ -17,6 +17,4 @@ namespace UMBIT.Prototico.Core.API.Servico.Interface
              where T1 : class;
     }
 }
-//    services.AddHttpClient<InterfaceDeServico, Servico que Herda>("",  (configHTTPClient) =>{
-//                configHTTPClient.BaseAddress = new Uri("");
-//});
+
