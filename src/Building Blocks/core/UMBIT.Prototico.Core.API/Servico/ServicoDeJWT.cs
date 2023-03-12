@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 using UMBIT.Prototico.Core.API.Entidade;
 using UMBIT.Prototico.Core.API.Servico.Interface;
 
-namespace UMBIT.Prototico.Core.API.Servico.Basicos
+namespace UMBIT.Prototico.Core.API.Servico
 {
-    public class ServicoDeJWT 
+    public class ServicoDeJWT
     {
         public static async Task<TokenJWT> GetToken(string user, string secret, double expiracaoMins, string validoEm, string emissor)
         {

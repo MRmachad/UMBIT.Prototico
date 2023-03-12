@@ -57,11 +57,5 @@ namespace UMBIT.Core.Repositorio.Repositorio
         /// </summary>
         /// <param name="objeto">Objeto a ser removido</param>
         void Remova(T objeto);
-
-        int SalveAlteracoes();
-        void InicieTransacao([CallerFilePath] string arquivo = null, [CallerMemberName] string metodo = null);
-        public void FinalizeTransacao([CallerFilePath] string arquivo = null, [CallerMemberName] string metodo = null);
-        void RevertaTransacao([CallerFilePath] string arquivo = null, [CallerMemberName] string metodo = null);
-        void Dispose();
     }
 }

@@ -13,8 +13,7 @@ namespace UMBIT.Core.Repositorio.Repositorio
         protected readonly DbContext Contexto;
 
         protected const int TAMANHO_PAGINA = 50;
-        protected IDbContextTransaction Transacao { get; set; }
-        private bool TransacaoAberta { get; set; }
+
         public Repositorio(DbContext contexto)
         {
             this.Contexto = contexto;
@@ -120,51 +119,6 @@ namespace UMBIT.Core.Repositorio.Repositorio
             }
         }
 
-        public int SalveAlteracoes()
-        {
-            return this.Contexto.SaveChanges();
-        }
-
-        public void InicieTransacao([CallerFilePath] string arquivo = null, [CallerMemberName] string metodo = null)
-        {
-            if (!this.TransacaoAberta)
-            {
-                this.Transacao = this.Contexto.Database.BeginTransaction();
-
-                this.TransacaoAberta = true;
-            }
-        }
-
-        public void FinalizeTransacao([CallerFilePath] string arquivo = null, [CallerMemberName] string metodo = null)
-        {
-            if (this.TransacaoAberta)
-            {
-                this.Transacao.Commit();
-                this.Transacao.Dispose();
-
-                this.TransacaoAberta = false;
-            }
-        }
-
-        public void RevertaTransacao([CallerFilePath] string arquivo = null, [CallerMemberName] string metodo = null)
-        {
-            if (this.TransacaoAberta )
-            {
-                this.Transacao.Rollback();
-                this.Transacao.Dispose();
-
-                this.TransacaoAberta = false;
-            }
-        }
-
-        public void Dispose()
-        {
-            if (this.Transacao != null)
-            {
-                this.Transacao.Dispose();
-            }
-
-            this.Contexto.Dispose();
-        }
+        
     }
 }
