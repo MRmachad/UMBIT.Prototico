@@ -19,7 +19,7 @@ namespace Prototico.Core.API.Configurate.ApiConfigurate
 
             var conexao = configuration.GetSection("ConnectionString").Value ?? "";
             services.AddDbContext<DbContext, DataContext>(options => options.UseMySql(conexao, ServerVersion.AutoDetect(conexao), b => b.MigrationsAssembly(nameApi)));
-            services.AddScoped<IDataServiceFactory, DataServiceFactory>();
+            services.AddScoped<IUnidadeDeTrabalho, UnidadeDeTrabalho>();
         }
     }
 }

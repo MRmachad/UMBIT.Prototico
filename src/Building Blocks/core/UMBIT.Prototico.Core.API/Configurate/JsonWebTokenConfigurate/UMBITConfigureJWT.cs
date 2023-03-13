@@ -41,7 +41,6 @@ namespace Prototico.Core.API.Configurate.JsonWebToken
                 };
             });
 
-            services.AddScoped<IServicoDeJWT, ServicoDeJWT>();
             services.Configure<SectionJwt>(configuration.GetSection("SectionJwt"));
         }
     }

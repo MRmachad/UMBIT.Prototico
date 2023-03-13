@@ -9,7 +9,8 @@ namespace UMBIT.Prototico.Core.API.Servico.Basicos
     public abstract class ServicoDeEntidadeBase<T> : IServicoDeEntidadeBase<T> where T : class
     {
         private IRepositorio<T> Repositorio { get; set; }
-        public ServicoDeEntidadeBase(IDataServiceFactory dataServiceFactory)
+        private IUnidadeDeTrabalho UnidadeDeTrabalho { get; set; }
+        public ServicoDeEntidadeBase(IUnidadeDeTrabalho dataServiceFactory)
         {
             Repositorio = dataServiceFactory.GetRepositorio<T>();
         }
@@ -18,7 +19,7 @@ namespace UMBIT.Prototico.Core.API.Servico.Basicos
             try
             {
                 Repositorio.Atualize(Entidade);
-                Repositorio.SalveAlteracoes();
+                UnidadeDeTrabalho.SalveAlteracoes();
             }
             catch (Exception ex)
             {
@@ -56,7 +57,7 @@ namespace UMBIT.Prototico.Core.API.Servico.Basicos
             try
             {
                 Repositorio.Remova(Entidade);
-                Repositorio.SalveAlteracoes();
+                UnidadeDeTrabalho.SalveAlteracoes();
             }
             catch (Exception ex)
             {
@@ -67,7 +68,7 @@ namespace UMBIT.Prototico.Core.API.Servico.Basicos
         public void AdicionaObjeto(T Entidade)
         {
             Repositorio.Adicione(Entidade);
-            Repositorio.SalveAlteracoes();
+            UnidadeDeTrabalho.SalveAlteracoes();
         }
     }
 }
