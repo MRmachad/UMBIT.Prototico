@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Net.Http;
 using System.Text;
@@ -12,26 +13,28 @@ namespace UMBIT.Prototico.Core.API.Servico.Basicos
     {
         private readonly HttpClient cliente;
 
-        public ServicoDeRequisicao(HttpClient cliente, string baseURL)
+        public ServicoDeRequisicao(HttpClient cliente)
         {
             this.cliente = cliente;
         }
 
-        public async Task<RequestResponse<T1>> ExecuteGetAsync<T, T1>(T toContent, string path,Dictionary<string, string> keyValuePairs, string mediaType)
+        public async Task<RequestResponse<T>> ExecuteGetAsync<T>(string path, Dictionary<string, string> keyValuePairs = null)
             where T : class
-            where T1 : class
         {
+
             var nameValue = new NameValueCollection();
-            
-            foreach(var keyValue in keyValuePairs)
-            {
-                nameValue.Add(keyValue.Key, keyValue.Value);
-            }
+            if (keyValuePairs != null)
+                foreach (var keyValue in keyValuePairs)
+                {
+                    nameValue.Add(keyValue.Key, keyValue.Value);
+                }
 
-            var response = await this.cliente.GetAsync((path + nameValue.ToString() ?? ""),HttpCompletionOption.ResponseContentRead);
+            string queryParam = String.IsNullOrEmpty(nameValue?.ToString()) ? "" : nameValue.ToString();
 
-            var filterRes = await this.TratarerrosResponseAsync<T1>(response);
-            return filterRes; 
+            var response = await this.cliente.GetAsync((path), HttpCompletionOption.ResponseContentRead);
+
+            var filterRes = await this.TratarerrosResponseAsync<T>(response);
+            return filterRes;
 
         }
 
