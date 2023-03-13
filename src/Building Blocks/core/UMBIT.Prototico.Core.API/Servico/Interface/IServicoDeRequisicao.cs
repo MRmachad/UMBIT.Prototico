@@ -7,7 +7,7 @@ using UMBIT.Prototico.Core.API.Servico.Basicos;
 
 namespace UMBIT.Prototico.Core.API.Servico.Interface
 {
-    internal interface IServicoDeRequisicao
+    public interface IServicoDeRequisicao
     {
         Task<ResponseResult> ExecutePostAsync<T>(T toContent, string path, Encoding encoding, string mediaType)
              where T : class;
