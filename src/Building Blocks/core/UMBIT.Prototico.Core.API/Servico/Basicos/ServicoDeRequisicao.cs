@@ -8,9 +8,6 @@ using UMBIT.Prototico.Core.API.Servico.Interface;
 
 namespace UMBIT.Prototico.Core.API.Servico.Basicos
 {
-    //    services.AddHttpClient<InterfaceDeServico, Servico que Herda>("",  (configHTTPClient) =>{
-    //                configHTTPClient.BaseAddress = new Uri("");
-    //});
     public abstract class ServicoDeRequisicao : Service, IServicoDeRequisicao
     {
         private readonly HttpClient cliente;
