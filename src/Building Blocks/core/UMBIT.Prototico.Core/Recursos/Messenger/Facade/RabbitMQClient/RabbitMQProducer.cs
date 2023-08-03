@@ -1,14 +1,12 @@
-﻿using RabbitMQ.Client;
-using System;
+﻿using System;
 using System.Text;
 using System.Text.Json;
-using UMBIT.Core.RabbitMQClient.BasicConfig;
-using UMBIT.Core.RabbitMQClient.Interfaces;
+using RabbitMQ.Client;
+using UMBIT.Prototico.Core.Recursos.Messenger.Facade.RabbitMQClient.BasicConfig;
+using UMBIT.Prototico.Core.Recursos.Messenger.Interfaces;
 
-namespace UMBIT.Core.RabbitMQClient
+namespace UMBIT.Prototico.Core.Recursos.Messenger.Facade.RabbitMQClient
 {
-
-
     public class RabbitMQProducer : IMessageProducer
     {
         public bool SendMessage<T>(T message, BasicPublish basicPublish, CredentialServerRMQ credentialServerRMQ)
@@ -30,7 +28,6 @@ namespace UMBIT.Core.RabbitMQClient
                     UserName = credentialServerRMQ.Login
                 };
 #endif
-
 
                 using (var connection = factory.CreateConnection())
                 {

@@ -1,12 +1,12 @@
-﻿using FluentValidation.Results;
-using MediatR;
+﻿using System;
 using System.Threading.Tasks;
-using UMBIT.Core.Messages;
-using UMBIT.Core.RabbitMQClient.Interfaces;
-using UMBIT.Core.RabbitMQClient.BasicConfig;
+using FluentValidation.Results;
+using MediatR;
 using Microsoft.Extensions.Options;
-using System;
-using UMBIT.Core.RabbitMQClient;
+using UMBIT.Prototico.Core.Recursos.Command;
+using UMBIT.Prototico.Core.Recursos.Messenger.Facade.RabbitMQClient;
+using UMBIT.Prototico.Core.Recursos.Messenger.Facade.RabbitMQClient.BasicConfig;
+using UMBIT.Prototico.Core.Recursos.Messenger.Interfaces;
 
 namespace UMBIT.Core.Mediator
 {

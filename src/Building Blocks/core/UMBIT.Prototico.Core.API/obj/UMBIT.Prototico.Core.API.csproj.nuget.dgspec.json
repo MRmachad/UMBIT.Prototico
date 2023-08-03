@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj": {}
+    "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj": {
+    "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj",
+        "projectUniqueName": "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj",
         "projectName": "UMBIT.Prototico.Core.API",
-        "projectPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj",
-        "packagesPath": "C:\\Users\\LeonardoSilva\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\obj\\",
+        "projectPath": "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\UMBIT.Prototico.Core.API.csproj",
+        "packagesPath": "C:\\Users\\macha\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LeonardoSilva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\macha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj": {
-                "projectPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj"
+              "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj": {
+                "projectPath": "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj"
               }
             }
           }
@@ -89,21 +89,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj": {
+    "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj",
+        "projectUniqueName": "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj",
         "projectName": "UMBIT.Prototico.Core",
-        "projectPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj",
-        "packagesPath": "C:\\Users\\LeonardoSilva\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\obj\\",
+        "projectPath": "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj",
+        "packagesPath": "C:\\Users\\macha\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LeonardoSilva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\macha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -162,7 +162,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

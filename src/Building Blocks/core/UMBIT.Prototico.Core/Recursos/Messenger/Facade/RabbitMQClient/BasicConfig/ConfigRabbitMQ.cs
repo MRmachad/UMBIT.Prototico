@@ -1,7 +1,7 @@
 ﻿using RabbitMQ.Client;
 using System.Collections.Generic;
 
-namespace UMBIT.Core.RabbitMQClient.BasicConfig
+namespace UMBIT.Prototico.Core.Recursos.Messenger.Facade.RabbitMQClient.BasicConfig
 {
     public class BasicPublish
     {
@@ -45,9 +45,9 @@ namespace UMBIT.Core.RabbitMQClient.BasicConfig
 
         public CredentialServerRMQ(string login, string senha, string hostName = "localhost")
         {
-            this.Login = login;
-            this.Senha = senha;
-            this.HostName = hostName;
+            Login = login;
+            Senha = senha;
+            HostName = hostName;
         }
     }
 

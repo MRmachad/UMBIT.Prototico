@@ -1,11 +1,10 @@
-﻿using FluentValidation.Results;
-using MediatR;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text.Json.Serialization;
+using FluentValidation.Results;
+using MediatR;
 
-namespace UMBIT.Core.Messages
+namespace UMBIT.Prototico.Core.Recursos.Command
 {
     public abstract class Command : Message, IRequest<ValidationResult>
     {
@@ -16,7 +15,7 @@ namespace UMBIT.Core.Messages
 
         public Command()
         {
-            this.Timestamp = DateTime.Now;
+            Timestamp = DateTime.Now;
         }
 
         public abstract bool EhValido();
@@ -32,22 +31,11 @@ namespace UMBIT.Core.Messages
 
         public Command()
         {
-            this.Timestamp = DateTime.Now;
+            Timestamp = DateTime.Now;
         }
 
         public abstract bool EhValido();
     }
 
-    public abstract class CommandResponse
-    {
-        [JsonIgnore]
-        public ValidationResult ValidationResult { get; protected set; }
-
-        private ICollection<string> Erros = new List<string>();
-
-        public void AdicionarErro(string erro)
-        {
-            this.ValidationResult.Errors.Add(new ValidationFailure() { ErrorMessage = erro});
-        }
-    }
+    
 }

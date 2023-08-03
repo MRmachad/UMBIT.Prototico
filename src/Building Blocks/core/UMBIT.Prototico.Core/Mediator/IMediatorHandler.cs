@@ -1,6 +1,6 @@
 ﻿using FluentValidation.Results;
 using System.Threading.Tasks;
-using UMBIT.Core.Messages;
+using UMBIT.Prototico.Core.Recursos.Command;
 
 namespace UMBIT.Core.Mediator
 {

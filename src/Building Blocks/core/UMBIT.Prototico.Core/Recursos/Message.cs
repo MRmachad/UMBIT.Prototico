@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UMBIT.Core.Messages
+namespace UMBIT.Prototico.Core.Recursos
 {
     public abstract class Message
     {
@@ -9,7 +9,7 @@ namespace UMBIT.Core.Messages
 
         protected Message()
         {
-            this.AggregateId = Guid.NewGuid();
+            AggregateId = Guid.NewGuid();
             MessageType = GetType().Name;
         }
     }

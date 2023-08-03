@@ -1,4 +1,4 @@
-﻿namespace UMBIT.Core.RabbitMQClient
+﻿namespace UMBIT.Prototico.Core.Recursos.Messenger.Facade.RabbitMQClient
 {
     public class RabbitMQConfigs
     {

@@ -22,3 +22,15 @@ D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\ob
 D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\obj\Debug\net6.0\refint\UMBIT.Prototico.Core.dll
 D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\obj\Debug\net6.0\UMBIT.Prototico.Core.pdb
 D:\Dev\ByMySelf\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\obj\Debug\net6.0\ref\UMBIT.Prototico.Core.dll
+D:\Dev\ByMySelf\Pessoal\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\obj\Debug\net6.0\UMBIT.Prototico.Core.csproj.AssemblyReference.cache
+D:\Dev\ByMySelf\Pessoal\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\obj\Debug\net6.0\UMBIT.Prototico.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\ByMySelf\Pessoal\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\obj\Debug\net6.0\UMBIT.Prototico.Core.AssemblyInfoInputs.cache
+D:\Dev\ByMySelf\Pessoal\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\obj\Debug\net6.0\UMBIT.Prototico.Core.AssemblyInfo.cs
+D:\Dev\ByMySelf\Pessoal\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\obj\Debug\net6.0\UMBIT.Prototico.Core.csproj.CoreCompileInputs.cache
+D:\Dev\ByMySelf\Pessoal\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\obj\Debug\net6.0\UMBIT.Prototico.Core.dll
+D:\Dev\ByMySelf\Pessoal\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\obj\Debug\net6.0\refint\UMBIT.Prototico.Core.dll
+D:\Dev\ByMySelf\Pessoal\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\obj\Debug\net6.0\UMBIT.Prototico.Core.pdb
+D:\Dev\ByMySelf\Pessoal\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\bin\Debug\net6.0\UMBIT.Prototico.Core.deps.json
+D:\Dev\ByMySelf\Pessoal\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\bin\Debug\net6.0\UMBIT.Prototico.Core.dll
+D:\Dev\ByMySelf\Pessoal\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\bin\Debug\net6.0\UMBIT.Prototico.Core.pdb
+D:\Dev\ByMySelf\Pessoal\UMBIT.Prototico\src\Building Blocks\core\UMBIT.Prototico.Core\obj\Debug\net6.0\ref\UMBIT.Prototico.Core.dll

@@ -1,6 +1,6 @@
-﻿using UMBIT.Core.RabbitMQClient.BasicConfig;
+﻿using UMBIT.Prototico.Core.Recursos.Messenger.Facade.RabbitMQClient.BasicConfig;
 
-namespace UMBIT.Core.RabbitMQClient.Interfaces
+namespace UMBIT.Prototico.Core.Recursos.Messenger.Interfaces
 {
     public interface IMessageProducer
     {

@@ -84,10 +84,8 @@ namespace UMBIT.Prototico.Core.API.Configurate.IdentityConfigurate
             }
 
             app.UseAuthorization();
-            app.UseAuthorization();
 
             return app;
-
 
         }
     }
