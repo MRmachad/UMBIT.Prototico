@@ -9,114 +9,28 @@ namespace UMBIT.Prototico.Core.Recursos.Messenger.Facade.RabbitMQClient
 {
     public class RabbitMQProducer : IMessageProducer
     {
-        public bool SendMessage<T>(T message, BasicPublish basicPublish, CredentialServerRMQ credentialServerRMQ)
+        public void SendMessage<T>(IModel model, T message) where T : class
         {
-            try
-            {
+            var jsonMessage = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message));
 
-#if DEBUG
-                var factory = new ConnectionFactory
-                {
-                    HostName = credentialServerRMQ.HostName
-                };
-#else
-
-               var factory = new ConnectionFactory
-                {
-                    HostName = credentialServerRMQ.HostName,
-                    Password = credentialServerRMQ.Senha,
-                    UserName = credentialServerRMQ.Login
-                };
-#endif
-
-                using (var connection = factory.CreateConnection())
-                {
-                    using (var channel = connection.CreateModel())
-                    {
-                        if (channel.IsOpen)
-                        {
-                            var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message));
-
-
-                            channel.BasicPublish(
-                                exchange: basicPublish.Exchange,
-                                mandatory: basicPublish.Mandatory,
-                                routingKey: basicPublish.RoutingKey,
-                                basicProperties: basicPublish.BasicProperties,
-                                body: body
-                                );
-
-                            return true;
-                        }
-
-                        return false;
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Erro no envio de mensagem ao RabbitMQ", e);
-            }
-
-
+            model.BasicPublish(
+                exchange: String.Empty,
+                String.Empty,
+                basicProperties: null,
+                body: jsonMessage);
         }
-        public bool SendMessage<T>(T message, QueueDeclare queueDeclare, BasicPublish basicPublish, CredentialServerRMQ credentialServerRMQ)
+        public void SendMessageByType<T>(IModel model, T message) where T : class
         {
-            try
-            {
-#if DEBUG
-                var factory = new ConnectionFactory
-                {
-                    HostName = credentialServerRMQ.HostName
-                };
-#else
+            model.QueueDeclare(message.GetType().Name, durable: true, false, false, null);
+            var jsonMessage = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message));
 
-               var factory = new ConnectionFactory
-                {
-                    HostName = credentialServerRMQ.HostName,
-                    Password = credentialServerRMQ.Senha,
-                    UserName = credentialServerRMQ.Login
-                };
-#endif
 
-                using (var connection = factory.CreateConnection())
-                {
-                    using (var channel = connection.CreateModel())
-                    {
-                        if (channel.IsOpen)
-                        {
-                            var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message));
-
-                            channel.QueueDeclare(
-                                queue: queueDeclare.Queue,
-                                durable: queueDeclare.Durable,
-                                exclusive: queueDeclare.Exclusive,
-                                autoDelete: queueDeclare.AutoDelete,
-                                arguments: queueDeclare.Arguments);
-
-                            channel.BasicPublish(
-
-                                exchange: basicPublish.Exchange,
-                                mandatory: basicPublish.Mandatory,
-                                routingKey: basicPublish.RoutingKey,
-                                basicProperties: basicPublish.BasicProperties,
-                                body: body
-                                );
-
-                            return true;
-                        }
-
-                        return false;
-
-                    }
-                }
-
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Erro no envio de mensagem ao RabbitMQ", e);
-            }
-
+            model.BasicPublish(
+                exchange: String.Empty,
+                routingKey: message.GetType().Name,
+                true,
+                basicProperties: null,
+                body: jsonMessage);
         }
     }
 }

@@ -1,10 +1,11 @@
-﻿using UMBIT.Prototico.Core.Recursos.Messenger.Facade.RabbitMQClient.BasicConfig;
+﻿using RabbitMQ.Client;
+using UMBIT.Prototico.Core.Recursos.Messenger.Facade.RabbitMQClient.BasicConfig;
 
 namespace UMBIT.Prototico.Core.Recursos.Messenger.Interfaces
 {
     public interface IMessageProducer
     {
-        bool SendMessage<T>(T message, BasicPublish basicPublish, CredentialServerRMQ credentialServerRMQ);
-        bool SendMessage<T>(T message, QueueDeclare queueDeclare, BasicPublish basicPublish, CredentialServerRMQ credentialServerRMQ);
+        void SendMessage<T>(IModel model, T message) where T : class;
+        void SendMessageByType<T>(IModel model, T message) where T : class;
     }
 }

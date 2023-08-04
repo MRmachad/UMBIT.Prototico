@@ -1,8 +1,7 @@
-﻿using System;
-using System.Text.Json;
-using RabbitMQ.Client;
+﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using UMBIT.Core.Mediator;
+using System;
+using System.Text.Json;
 using UMBIT.Prototico.Core.Recursos.Messenger.Facade.RabbitMQClient.BasicConfig;
 using UMBIT.Prototico.Core.Recursos.Messenger.Interfaces;
 
@@ -11,30 +10,24 @@ namespace UMBIT.Prototico.Core.Recursos.Messenger.Facade.RabbitMQClient
     public class RabbitMQConsumer : IMessageConsumer
     {
 
-        public RabbitMQConsumer() {  }
-        public void ReceiveMessage<T>(ConnectionFactory factoryConnection, Action<T> action) where T : class
+        public RabbitMQConsumer() { }
+        public void ReceiveMessage<T>(IModel model, Action<T> action) where T : class
         {
             try
             {
-                using (var connection = factoryConnection.CreateConnection())
+                if (model.IsOpen)
                 {
-                    using (var channel = connection.CreateModel())
+                    var consumer = new EventingBasicConsumer(model);
+                    consumer.Received += (model, eventArgs) =>
                     {
-                        if (channel.IsOpen)
-                        {
-                            var consumer = new EventingBasicConsumer(channel);
-                            consumer.Received += (model, eventArgs) =>
-                            {
-                                var body = eventArgs.Body.ToArray();
+                        var body = eventArgs.Body.ToArray();
 
-                                var res = JsonSerializer.Deserialize<T>(body);
+                        var res = JsonSerializer.Deserialize<T>(body);
 
-                                action(res);
+                        action(res);
 
-                            };
+                    };
 
-                        }
-                    }
                 }
 
             }
@@ -45,39 +38,30 @@ namespace UMBIT.Prototico.Core.Recursos.Messenger.Facade.RabbitMQClient
 
 
         }
-
-        public void ReceiveMessageByType<T>(ConnectionFactory factoryConnection, Action<T> action) where T : class
+        public void ReceiveMessageByType<T>(IModel model, Action<T> action) where T : class
         {
             try
             {
-                using (var connection = factoryConnection.CreateConnection())
+                if (model.IsOpen)
                 {
-                    using (var channel = connection.CreateModel())
+                    model.QueueDeclare(
+                         queue: typeof(T).Name,
+                         durable: true,
+                         exclusive: false,
+                         autoDelete: false);
+
+                    var consumer = new EventingBasicConsumer(model);
+                    consumer.Received += (model, eventArgs) =>
                     {
-                        if (channel.IsOpen)
-                        {
-                            channel.QueueDeclare(
-                             queue: typeof(T).Name,
-                             durable: true,
-                             exclusive: false,
-                             autoDelete: false);
+                        var body = eventArgs.Body.ToArray();
 
-                            var consumer = new EventingBasicConsumer(channel);
-                            consumer.Received += (model, eventArgs) =>
-                            {
-                                var body = eventArgs.Body.ToArray();
+                        var res = JsonSerializer.Deserialize<T>(body);
 
-                                var res = JsonSerializer.Deserialize<T>(body);
+                        action(res);
 
-                                action(res);
+                    };
 
-                            };
-
-                        }
-
-                    }
                 }
-
             }
             catch (Exception e)
             {
