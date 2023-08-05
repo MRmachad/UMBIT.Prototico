@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\_ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj": {}
+    "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\_ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj": {
+    "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\_ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj",
+        "projectUniqueName": "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj",
         "projectName": "UMBIT.Prototico.Core",
-        "projectPath": "D:\\Dev\\_ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj",
-        "packagesPath": "C:\\Users\\LeonardoSilva\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\_ByMySelf\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\obj\\",
+        "projectPath": "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\UMBIT.Prototico.Core.csproj",
+        "packagesPath": "C:\\Users\\macha\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\ByMySelf\\Pessoal\\UMBIT.Prototico\\src\\Building Blocks\\core\\UMBIT.Prototico.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LeonardoSilva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\macha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

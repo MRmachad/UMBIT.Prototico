@@ -11,6 +11,7 @@ namespace UMBIT.Prototico.Core.Recursos.Mediator
 
         public MediatorHandler(IMediator mediator)
         {
+            this._mediator = mediator;
         }
 
         public async Task<ValidationResult> EnviarComando<T>(T comando) where T : Command.Command
@@ -18,13 +19,16 @@ namespace UMBIT.Prototico.Core.Recursos.Mediator
             return await _mediator.Send(comando);
         }
 
-        public async Task<TRes> EnviarComando<T, TRes>(T comando)
-            where T : Command<TRes>
-            where TRes : CommandResponse
+        public async Task<TResult> EnviarComando<T, TResult>(T comando)
+            where T : Command<TResult>
+            where TResult : CommandResponse
         {
-            return await _mediator.Send(comando);
+            return await _mediator.Send<TResult>(comando);
         }
 
-
+        public void PubliqueEvento<T>(T _event) where T : Event.Event
+        {
+            this._mediator.Publish(_event);
+        }
     }
 }

@@ -1,15 +1,12 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Microsoft.IdentityModel.Tokens;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
 using UMBIT.Prototico.Core.API.Entidade;
-using UMBIT.Prototico.Core.API.Servico.Interface;
 
 namespace UMBIT.Prototico.Core.API.Servico
 {

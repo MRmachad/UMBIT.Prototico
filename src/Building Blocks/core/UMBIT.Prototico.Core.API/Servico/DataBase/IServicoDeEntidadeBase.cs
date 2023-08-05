@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace UMBIT.CORE.API.Servico.Interface
+namespace UMBIT.Prototico.Core.API.Servico.DataBase
 {
     public interface IServicoDeEntidadeBase<T> where T : class
     {

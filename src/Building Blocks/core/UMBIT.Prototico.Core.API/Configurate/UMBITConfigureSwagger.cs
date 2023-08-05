@@ -4,7 +4,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using UMBIT.API.EXEMPLO.Configurations.basic;
 
-namespace Prototico.Core.API.Configurate.Swagger
+namespace UMBIT.Prototico.Core.API.Configurate
 {
     public static class UMBITConfigureSwagger
     {

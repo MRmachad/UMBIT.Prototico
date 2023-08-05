@@ -1,14 +1,12 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using System;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Prototico.Core.API.Configurate.TemplateSection;
-using System;
-using System.Text;
-using UMBIT.Prototico.Core.API.Servico.Basicos;
-using UMBIT.Prototico.Core.API.Servico.Interface;
 
-namespace Prototico.Core.API.Configurate.JsonWebToken
+namespace UMBIT.Prototico.Core.API.Configurate
 {
     public static class UMBITConfigureJWT
     {

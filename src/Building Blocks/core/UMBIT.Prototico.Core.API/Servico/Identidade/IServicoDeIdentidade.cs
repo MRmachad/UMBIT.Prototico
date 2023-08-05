@@ -1,9 +1,7 @@
-﻿using FluentValidation.Results;
-using Microsoft.AspNetCore.Identity;
-using System.Threading.Tasks;
-using UMBIT.Prototico.Core.API.Entidade;
+﻿using System.Threading.Tasks;
+using UMBIT.Prototico.Core.API.Model;
 
-namespace UMBIT.Prototico.Core.API.Servico.Interface
+namespace UMBIT.Prototico.Core.API.Servico.Identidade
 {
     public interface IServicoDeIdentidade
     {
@@ -11,10 +9,5 @@ namespace UMBIT.Prototico.Core.API.Servico.Interface
         Task<AuthResponse> Logout(string usuario, string senha);
         Task<AuthResponse> Cadastro(string usuario, string senha);
         Task<AuthResponse> AutenticaUsuarioAsync(string usuario, string senha);
-    }
-
-    public class AuthResponse : ValidationResult
-    {
-        public TokenJWT tokenJWT { get; set; }
     }
 }

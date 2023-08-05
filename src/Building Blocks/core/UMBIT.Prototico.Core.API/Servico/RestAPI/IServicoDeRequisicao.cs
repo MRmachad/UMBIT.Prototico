@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UMBIT.Prototico.Core.API.Servico.Basicos;
+using UMBIT.Prototico.Core.API.Servico.RestAPI.Basicos;
 
-namespace UMBIT.Prototico.Core.API.Servico.Interface
+namespace UMBIT.Prototico.Core.API.Servico.RestAPI
 {
     public interface IServicoDeRequisicao
     {

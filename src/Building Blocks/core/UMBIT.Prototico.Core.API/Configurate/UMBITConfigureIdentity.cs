@@ -3,22 +3,26 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Prototico.Core.API.Configurate.JsonWebToken;
 using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using UMBIT.Prototico.Core.API.Data;
 using UMBIT.Prototico.Core.API.Extensions;
-using UMBIT.Prototico.Core.API.Servico;
-using UMBIT.Prototico.Core.API.Servico.Interface;
+using UMBIT.Prototico.Core.API.Servico.Identidade;
+using UMBIT.Prototico.Core.API.Servico.Identidade.Facade.Identity;
 
-namespace UMBIT.Prototico.Core.API.Configurate.IdentityConfigurate
+namespace UMBIT.Prototico.Core.API.Configurate
 {
     public static class UMBITConfigureIdentity
     {
-        public static IServiceCollection AddUMBITIdentityConfiguration(this IServiceCollection services,
-                                                                        IConfiguration configuration)
+        /// <summary>
+        /// Adiciona aos serviços do APP o uso de Contexto de Identity e o serviço de Token JWT
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="configuration"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddUMBITIdentityConfiguration(this IServiceCollection services, IConfiguration configuration)
         {
 
             StackTrace stackTrace = new StackTrace();
@@ -32,7 +36,6 @@ namespace UMBIT.Prototico.Core.API.Configurate.IdentityConfigurate
                 .AddErrorDescriber<IdentityMensagensPortugues>()
                 .AddEntityFrameworkStores<IdentityContext>()
                 .AddDefaultTokenProviders();
-
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -56,10 +59,14 @@ namespace UMBIT.Prototico.Core.API.Configurate.IdentityConfigurate
 
             services.AddUMBITServiceJWT(configuration);
 
-
             return services;
         }
 
+        /// <summary>
+        ///  Define o uso da Migartions para databa do contexto do Identity
+        /// </summary>
+        /// <param name="app"></param>
+        /// <returns></returns>
         public static IApplicationBuilder UseUMBITIdentityConfiguration(this IApplicationBuilder app)
         {
 
@@ -83,10 +90,7 @@ namespace UMBIT.Prototico.Core.API.Configurate.IdentityConfigurate
                 }
             }
 
-            app.UseAuthorization();
-
             return app;
-
         }
     }
 }

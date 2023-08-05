@@ -1,18 +1,17 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using System.Diagnostics;
+using System.Linq;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
 using UMBIT.Core.Repositorio;
 using UMBIT.Core.Repositorio.Contexto;
 using UMBIT.Prototico.Core.API.Data;
 
-namespace Prototico.Core.API.Configurate.ApiConfigurate
+namespace UMBIT.Prototico.Core.API.Configurate
 {
-    public static class UMBITConfigureAPICore
+    public static class UMBITConfigureMySQL
     {
         public static void AddUMBITServiceMySQL(this IServiceCollection services, IConfiguration configuration)
         {
@@ -45,7 +44,6 @@ namespace Prototico.Core.API.Configurate.ApiConfigurate
 
                         context?.Database.EnsureCreated();
 #endif
-
                     }
 
                 }

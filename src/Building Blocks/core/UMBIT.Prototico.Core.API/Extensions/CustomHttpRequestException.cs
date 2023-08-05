@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UMBIT.Prototico.Core.API.Extensions
 {
@@ -11,13 +7,12 @@ namespace UMBIT.Prototico.Core.API.Extensions
     {
         public HttpStatusCode StatusCode;
 
-        public CustomHttpRequestException()
+        protected CustomHttpRequestException()
         {
 
         }
 
-        public CustomHttpRequestException(string message, Exception innerException)
-            : base(message, innerException)
+        public CustomHttpRequestException(string message, Exception innerException) : base(message, innerException)
         {
 
         }

@@ -8,7 +8,7 @@ using UMBIT.Prototico.Core.API.Extensions;
 using System.Threading.Tasks;
 using System;
 
-namespace UMBIT.Prototico.Core.API.Servico.Basicos
+namespace UMBIT.Prototico.Core.API.Servico.RestAPI.Basicos
 {
 
     public abstract class Service
@@ -38,9 +38,9 @@ namespace UMBIT.Prototico.Core.API.Servico.Basicos
                         resDeseriaze.Errors.Mensagens.ForEach((msg) => responseErro.AdicionarErro(msg));
 
                         return responseErro;
-                    }; 
+                    };
 
-                    
+
             }
 
             response.EnsureSuccessStatusCode();
@@ -78,15 +78,15 @@ namespace UMBIT.Prototico.Core.API.Servico.Basicos
 
             }
             response.EnsureSuccessStatusCode();
-            return new ResponseResult { Status = (int)response.StatusCode ,Title = response.Headers.ToString() };
+            return new ResponseResult { Status = (int)response.StatusCode, Title = response.Headers.ToString() };
 
         }
     }
 
 
-    public class RequestResponse<T> : RequestResponseBase where T: class
+    public class RequestResponse<T> : RequestResponseBase where T : class
     {
-        public T Frombory { get; set; } 
+        public T Frombory { get; set; }
     }
     public abstract class RequestResponseBase
     {
@@ -97,7 +97,7 @@ namespace UMBIT.Prototico.Core.API.Servico.Basicos
 
         public void AdicionarErro(string erro)
         {
-            this.ValidationResult.Errors.Add(new ValidationFailure() { ErrorMessage = erro });
+            ValidationResult.Errors.Add(new ValidationFailure() { ErrorMessage = erro });
         }
     }
     public class ResponseResult

@@ -1,4 +1,5 @@
 .vs
 ./src/Building Blocks/core/Prototico.Core/obj
+./src/Building Blocks/core/Prototico.Core/bin
 ./src/Building Blocks/core/UMBIT.Prototico.Core.API/obj
 ./src/Building Blocks/core/UMBIT.Prototico.Core.API/bin

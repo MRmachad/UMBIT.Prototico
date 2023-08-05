@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UMBIT.Core.Repositorio;
 using UMBIT.Core.Repositorio.Repositorio;
-using UMBIT.CORE.API.Servico.Interface;
 
-namespace UMBIT.Prototico.Core.API.Servico.Basicos
+namespace UMBIT.Prototico.Core.API.Servico.DataBase
 {
     public abstract class ServicoDeEntidadeBase<T> : IServicoDeEntidadeBase<T> where T : class
     {
